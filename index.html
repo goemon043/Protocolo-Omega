@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Protocolo Omega: Rescate Tecnológico — Portal Oficial</title>
+  <meta name="description" content="Videojuego 3D isométrico de sigilo e infiltración. Juega en el navegador, mira el tráiler y descarga el GDD.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#inicio">PROTOCOLO <span>OMEGA</span></a>
+  <nav>
+    <a href="#jugar">Jugar</a>
+    <a href="#controles">Controles</a>
+    <a href="#trailer">Tráiler</a>
+    <a href="#pisos">Los 6 pisos</a>
+    <a href="#gdd">GDD</a>
+    <a href="#equipo">Equipo</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <p class="tag">JUEGO 3D ISOMÉTRICO · SIGILO · INFILTRACIÓN · WEBGL</p>
+  <h1>PROTOCOLO OMEGA</h1>
+  <h2>Rescate Tecnológico</h2>
+  <p class="lead">
+    La IA villana <b>NÉMESIS</b> robó 15 componentes electrónicos y los escondió en su torre de 6 pisos.
+    Como la <b>Unidad X-01</b>, infíltrate, recupéralos y escapa por el helipuerto antes de que el reloj llegue a 00:00.
+  </p>
+  <div class="cta">
+    <a class="btn primary" href="#jugar">▶ Jugar ahora</a>
+    <a class="btn" href="#trailer">Ver tráiler</a>
+    <a class="btn" href="#gdd">Descargar GDD (PDF)</a>
+  </div>
+</section>
+
+<section id="jugar" class="block">
+  <h3>Videojuego jugable</h3>
+  <p class="muted">Se ejecuta directamente en el navegador de escritorio, sin descargas. Haz clic dentro del juego para dar foco al teclado.</p>
+
+  <div class="game-wrap" id="gameWrap">
+    <iframe id="gameFrame" title="Protocolo Omega - WebGL" allowfullscreen allow="fullscreen; autoplay"></iframe>
+    <div class="placeholder" id="gamePlaceholder" hidden>
+      <p><b>El build WebGL aún no está cargado.</b></p>
+      <p>Copia el contenido de la carpeta de build de Unity dentro de <code>game/</code> (debe existir <code>game/index.html</code>).</p>
+      <p class="muted">Si abres esta página con doble clic (file://) el navegador puede bloquear el juego: usa un servidor local o la web publicada.</p>
+    </div>
+  </div>
+  <div class="game-actions">
+    <button class="btn" id="btnFullscreen">⛶ Pantalla completa</button>
+    <span class="muted">Navegadores recomendados: Chrome, Edge o Firefox de escritorio.</span>
+  </div>
+</section>
+
+<section id="controles" class="block">
+  <h3>Instrucciones y controles</h3>
+  <div class="grid controls">
+    <div class="card"><kbd>W A S D</kbd> / <kbd>↑ ← ↓ →</kbd><p>Mover a la Unidad X-01 (alineado a la cámara isométrica).</p></div>
+    <div class="card"><kbd>E</kbd><p>Pulsar botones de panel, usar ascensores y activar la baliza del helipuerto.</p></div>
+    <div class="card"><kbd>Espacio</kbd> / <kbd>Clic izq.</kbd><p>Pulso EMP desde el pecho: aturde a un guardia 4 s (enfriamiento 5 s).</p></div>
+    <div class="card"><kbd>Ctrl</kbd> / <kbd>C</kbd><p>Camuflarte dentro de una estación de servidores (visor verde, sin moverte).</p></div>
+    <div class="card"><kbd>Esc</kbd><p>Pausar / reanudar la partida.</p></div>
+  </div>
+  <div class="grid rules">
+    <div class="card"><h4>🏆 Victoria</h4><p>Recupera los 15 componentes, activa la baliza del Piso 6 y sobrevive 10 s hasta que aterrice el helicóptero.</p></div>
+    <div class="card"><h4>💀 Derrota</h4><p>Pierde tus 3 vidas (guardias o láseres) o que el reloj global de 180 s llegue a 00:00.</p></div>
+    <div class="card"><h4>💡 Consejos</h4><p>Las puertas solo se abren con sus botones. Una puerta que se mueve sobre un guardia lo aturde 4 s. Los láseres alternan 3 s encendido / 2 s apagado.</p></div>
+  </div>
+</section>
+
+<section id="trailer" class="block">
+  <h3>Tráiler oficial</h3>
+  <div class="video-wrap">
+    <!-- Opción A: video local (coloca el archivo en media/trailer.mp4) -->
+    <video id="trailerVideo" controls preload="metadata" poster="media/poster.jpg">
+      <source src="media/trailer.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+    <!-- Opción B: YouTube. Descomenta y pon tu ID, y borra el <video> de arriba.
+    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO" title="Tráiler" allowfullscreen></iframe>
+    -->
+  </div>
+  <p class="muted">Duración recomendada: 30–90 s. Guarda el video como <code>media/trailer.mp4</code>.</p>
+</section>
+
+<section id="pisos" class="block">
+  <h3>Los 6 pisos de NÉMESIS</h3>
+  <div class="grid floors">
+    <div class="card f1"><h4>Piso 1 · Almacén Industrial</h4><p>1 Núcleo de Energía</p></div>
+    <div class="card f2"><h4>Piso 2 · Monitoreo y Oficinas</h4><p>2 Sensores Ópticos</p></div>
+    <div class="card f3"><h4>Piso 3 · Laboratorio de Circuitos</h4><p>3 Microchips Cuánticos</p></div>
+    <div class="card f4"><h4>Piso 4 · Taller de Ensamblaje</h4><p>4 Servomotores Pesados</p></div>
+    <div class="card f5"><h4>Piso 5 · Bóveda de NÉMESIS</h4><p>5 Procesadores Centrales</p></div>
+    <div class="card f6"><h4>Piso 6 · Helipuerto</h4><p>Extracción final (10 s)</p></div>
+  </div>
+</section>
+
+<section id="gdd" class="block">
+  <h3>Documento de Diseño (GDD)</h3>
+  <p class="muted">Versión final actualizada del Game Design Document.</p>
+  <a class="btn primary" href="docs/GDD_Protocolo_Omega.pdf" download>⬇ Descargar GDD en PDF</a>
+</section>
+
+<section id="equipo" class="block">
+  <h3>Equipo y recursos</h3>
+  <div class="grid team">
+    <div class="card"><h4>[Nombre Integrante 1]</h4><p>Arte 3D y escenarios</p></div>
+    <div class="card"><h4>[Nombre Integrante 2]</h4><p>Programación de mecánicas</p></div>
+    <div class="card"><h4>[Nombre Integrante 3]</h4><p>IA, UI, audio y despliegue</p></div>
+  </div>
+  <p class="muted">Recursos propios: modelo 3D y animaciones de la Unidad X-01 y del Bot Guardia Corrupto, y todos los scripts C#. Recursos de terceros: indicados en el GDD.</p>
+</section>
+
+<footer>
+  <p>Protocolo Omega: Rescate Tecnológico · Game Development · Hecho con Unity 6 (WebGL)</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
